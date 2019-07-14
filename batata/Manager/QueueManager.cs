@@ -24,15 +24,15 @@ namespace core.Queue.Manager
             return Task.CompletedTask;
         }
 
-        public List<Vote> GetQueue()
+        public List<Vote> GetAllVotesAndClearQueue()
         {
-            var allVoteQueue = new List<Vote>();           
+            var allVotesQueue = new List<Vote>();           
             lock (_votes)
             {
-                 allVoteQueue = _votes.ToList();
+                 allVotesQueue = _votes.ToList();
                 _votes.Clear();
             }
-            return allVoteQueue;
+            return allVotesQueue;
         }
     }
 }

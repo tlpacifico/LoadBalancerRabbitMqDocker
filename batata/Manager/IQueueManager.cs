@@ -1,8 +1,6 @@
 ﻿
 using Election.Api.Rest;
-using MassTransit;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 
 
@@ -12,6 +10,6 @@ namespace core.Queue.Manager
     {
         Task AddVote(Vote vote);
 
-        List<Vote> GetQueue();
+        List<Vote> GetAllVotesAndClearQueue();
     }
 }
