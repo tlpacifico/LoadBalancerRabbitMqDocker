@@ -30,7 +30,7 @@ namespace Election.Api.Rest.Controllers
             if (!ElectionCandidated.Contains(model.CandidateId))
                 return BadRequest("Invalid candidate");
 
-            Vote vote = new Vote(model.CandidateId, model.UserId);
+            Vote.Core.Vote vote = new Vote.Core.Vote(model.CandidateId, model.UserId);
 
             Uri uri = new Uri($"{_rabbitOptions.HostName.ToString()}vote_queue");
             var endPoint = await _bus.GetSendEndpoint(uri);

@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY Election.Api.Rest/Election.Api.Rest.csproj Election.Api.Rest/
-COPY batata/Vote.Core.csproj batata/
+COPY Vote.Core/Vote.Core.csproj Vote.Core/
 RUN dotnet restore Election.Api.Rest/Election.Api.Rest.csproj
 COPY . .
 WORKDIR /src/Election.Api.Rest

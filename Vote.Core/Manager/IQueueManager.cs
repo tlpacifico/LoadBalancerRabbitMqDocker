@@ -1,10 +1,8 @@
-﻿
-using Election.Api.Rest;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace core.Queue.Manager
+namespace Vote.Core.Queue.Manager
 {
     public interface IQueueManager
     {

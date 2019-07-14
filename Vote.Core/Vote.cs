@@ -1,5 +1,5 @@
 ﻿
-namespace Election.Api.Rest
+namespace Vote.Core
 {
     public class Vote
     {

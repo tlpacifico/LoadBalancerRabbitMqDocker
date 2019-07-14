@@ -1,12 +1,9 @@
-﻿using Election.Api.Rest;
-using MassTransit;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace core.Queue.Manager
+namespace Vote.Core.Queue.Manager
 {
     public class QueueManager : IQueueManager
     {      

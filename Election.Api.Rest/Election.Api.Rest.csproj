@@ -16,7 +16,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\batata\Vote.Core.csproj" />
+    <ProjectReference Include="..\Vote.Core\Vote.Core.csproj" />
   </ItemGroup>
 
 </Project>

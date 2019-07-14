@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY Vote.Queue/Vote.Queue.csproj Vote.Queue/
-COPY batata/Vote.Core.csproj batata/
+COPY Vote.Core/Vote.Core.csproj Vote.Core/
 RUN dotnet restore Vote.Queue/Vote.Queue.csproj
 COPY . .
 WORKDIR /src/Vote.Queue

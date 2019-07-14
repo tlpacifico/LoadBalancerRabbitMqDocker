@@ -1,6 +1,4 @@
 ﻿using System;
-using core.Queue.Manager;
-using Election.Api.Rest;
 using GreenPipes;
 using MassTransit;
 using MassTransit.Util;
@@ -12,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Quartz;
 using Quartz.Impl;
 using Quartz.Spi;
+using Vote.Core;
+using Vote.Core.Queue.Manager;
 using Vote.Queue.Job;
 
 

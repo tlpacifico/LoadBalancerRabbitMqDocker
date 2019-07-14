@@ -1,10 +1,9 @@
-﻿using core.Queue.Manager;
-using MassTransit;
+﻿using MassTransit;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
+using Vote.Core.Queue.Manager;
 
-
-namespace Election.Api.Rest
+namespace Vote.Core
 {
     public class ConsumerQueue : IConsumer<Vote>
     {

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Election.Api.Rest", "Electi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vote.Queue", "Vote.Queue\Vote.Queue.csproj", "{97C36115-3D2E-4E1A-B700-2B239A143935}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vote.Core", "batata\Vote.Core.csproj", "{832BDFD2-1707-45F1-BD52-B6F14D076872}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E54ABD8F-6264-4757-8422-6A5F20D0093E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DCC99469-A6A3-4A3C-A6D6-E66EBC50B184}"
@@ -16,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LoadBalancer\Dockerfile = LoadBalancer\Dockerfile
 		LoadBalancer\nginx.conf = LoadBalancer\nginx.conf
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vote.Core", "Vote.Core\Vote.Core.csproj", "{48BDC48B-5811-47F6-B653-C32E31D9E55F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +31,14 @@ Global
 		{97C36115-3D2E-4E1A-B700-2B239A143935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C36115-3D2E-4E1A-B700-2B239A143935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C36115-3D2E-4E1A-B700-2B239A143935}.Release|Any CPU.Build.0 = Release|Any CPU
-		{832BDFD2-1707-45F1-BD52-B6F14D076872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{832BDFD2-1707-45F1-BD52-B6F14D076872}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{832BDFD2-1707-45F1-BD52-B6F14D076872}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{832BDFD2-1707-45F1-BD52-B6F14D076872}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E54ABD8F-6264-4757-8422-6A5F20D0093E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E54ABD8F-6264-4757-8422-6A5F20D0093E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E54ABD8F-6264-4757-8422-6A5F20D0093E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E54ABD8F-6264-4757-8422-6A5F20D0093E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BDC48B-5811-47F6-B653-C32E31D9E55F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BDC48B-5811-47F6-B653-C32E31D9E55F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BDC48B-5811-47F6-B653-C32E31D9E55F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BDC48B-5811-47F6-B653-C32E31D9E55F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
