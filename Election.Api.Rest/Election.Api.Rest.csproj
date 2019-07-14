@@ -7,19 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
-    <PackageReference Include="RabbitMQ.Client" Version="5.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />   
     <PackageReference Include="MassTransit" Version="5.3.2" />
     <PackageReference Include="MassTransit.AspNetCore" Version="5.3.2" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="5.3.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />   
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\batata\Vote.Core.csproj" />
   </ItemGroup>

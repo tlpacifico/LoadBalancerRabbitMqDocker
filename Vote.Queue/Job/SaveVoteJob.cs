@@ -27,7 +27,7 @@ namespace Vote.Queue.Job
         public Task Execute(IJobExecutionContext context)
         {
             var votesToSave = _queueManager
-                           .GetQueue()
+                           .GetAllVotesAndClearQueue()
                            .Select(o => new VoteEntity() { CandidateId = o.CandidateId, UserId = o.UserId });
             if(votesToSave == null || votesToSave.Count() <= 0)
                 return Task.CompletedTask;
