@@ -15,7 +15,6 @@ namespace Election.Api.Rest.Controllers
         private readonly List<string> ElectionCandidated = new List<string>() { "Candidate1", "Candidate2", "Candidate3", "Candidate4", "Candidate5" };
         private readonly IBusControl _bus;
         private readonly RabbitMqOptions _rabbitOptions;
-        //private readonly Uri EndPoint = new Uri("vote_queue", UriKind.Relative);
 
         public VoteController(IBusControl bus, IOptions<RabbitMqOptions> rabbitOptions)
         {

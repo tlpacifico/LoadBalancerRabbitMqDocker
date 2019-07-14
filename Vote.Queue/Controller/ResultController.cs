@@ -16,7 +16,7 @@ namespace Vote.Queue.Controller
         {
             using (var db = new VoteContext())
             {
-                return Ok(db.Vote.Count());
+                return Ok(db.Vote.ToList());
             }
         }
     }

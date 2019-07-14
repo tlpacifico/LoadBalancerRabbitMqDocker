@@ -33,8 +33,6 @@ namespace Vote.Queue
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-
-
             services             
               .AddMassTransit(x => {
                   x.AddConsumer<ConsumerQueue>();
@@ -65,7 +63,7 @@ namespace Vote.Queue
             services.AddSingleton<SaveVoteJob>();
             services.AddSingleton(new JobSchedule(
                 jobType: typeof(SaveVoteJob),
-                cronExpression: "0/10 * * * * ?")); // run every 5 seconds
+                cronExpression: "0/10 * * * * ?")); // run every 10 seconds
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

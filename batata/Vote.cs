@@ -10,5 +10,6 @@ namespace Election.Api.Rest
         }
         public string CandidateId { get; set; }
         public string UserId { get; set; }
+       
     }
 }
