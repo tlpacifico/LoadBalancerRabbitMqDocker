@@ -1,0 +1,70 @@
+version: '3.4'
+
+networks:
+  election.api.network:
+     driver: bridge
+
+
+services:
+  nginx:
+     build: ./loadbalancer
+     container_name: electionapi.local
+     ports:
+       - "20000:80"
+     depends_on:
+       - rabbitmq
+       - election.api.rest_01
+       - election.api.rest_02
+     networks:
+      - election.api.network
+
+
+  election.api.rest_01:  
+    build:
+      context: .
+      dockerfile: Election.Api.Rest/Dockerfile
+    container_name: election.api.rest_01
+    ports:
+      - "20001:80"
+    expose:
+      - "80"  
+    networks:
+      - election.api.network
+  
+  election.api.rest_02:  
+    build:
+      context: .
+      dockerfile: Election.Api.Rest/Dockerfile
+    container_name: election.api.rest_02
+    ports:
+      - "20002:80"
+    depends_on:
+       - rabbitmq
+    networks:
+      - election.api.network
+
+  vote.queue:
+    image: votequeue
+    container_name: votequeue
+    build:
+      context: .
+      dockerfile: Vote.Queue/Dockerfile
+    ports:
+      - "20003:80"
+    depends_on:
+       - rabbitmq
+    networks:
+      - election.api.network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    container_name: rabbitmq
+    hostname: my-rabbit
+    networks:
+      - election.api.network
+
+
+ 
